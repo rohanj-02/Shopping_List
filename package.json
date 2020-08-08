@@ -1,0 +1,29 @@
+{
+	"name": "shopping_list",
+	"version": "1.0.0",
+	"description": "A shopping list based on the MERN stack( tutorial by Brad Traversy)",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"server": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rohanj-02/Shopping_List.git"
+	},
+	"author": "Rohan Jain",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rohanj-02/Shopping_List/issues"
+	},
+	"homepage": "https://github.com/rohanj-02/Shopping_List#readme",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"concurrently": "^5.3.0",
+		"express": "^4.17.1",
+		"mongoose": "^5.9.28"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.4"
+	}
+}
