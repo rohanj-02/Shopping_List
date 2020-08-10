@@ -12,7 +12,6 @@ import {
 } from "reactstrap";
 import { addItem } from "../actions/itemActions";
 import PropTypes from "prop-types";
-import { v1 as uuid } from "uuid";
 
 class ItemModal extends Component {
 	state = {
@@ -29,7 +28,6 @@ class ItemModal extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const newItem = {
-			id: uuid(),
 			name: this.state.name,
 		};
 		this.props.addItem(newItem);
