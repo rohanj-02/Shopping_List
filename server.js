@@ -8,8 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-// db = require("./config/keys").mongoURI;
-db = process.env.mongoURI;
+const db = process.env.mongoURI || require("./config/keys").mongoURI;
 
 mongoose
 	.connect(db)
@@ -19,19 +18,13 @@ mongoose
 app.use("/api/items", items);
 
 // Serve static assets If in production
-app.use(express.static(path.join(__dirname, "client/build")));
-
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static(path.join(__dirname, "client/build")));
 	//
 	app.get("*", (req, res) => {
-		res.sendfile(path.join((__dirname = "client/build/index.html")));
+		res.sendFile(path.join(__dirname + "client/build/index.html"));
 	});
 }
-//build mode
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname + "/client/public/index.html"));
-});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
