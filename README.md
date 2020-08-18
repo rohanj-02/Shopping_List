@@ -7,7 +7,9 @@ Anyone can see existing list but to edit the list you will have to register in t
 ## To run on localhost:
 `
 npm install
+ 
 npm client-install
+ 
 npm run dev
 `
 

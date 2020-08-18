@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const auth = require("../../middleware/auth");
 
 // @route   POST api/auth/
-// @desc    Register new user
+// @desc    Login new user
 // @access  Public
 router.post("/", (req, res) => {
 	const { email, password } = req.body;
