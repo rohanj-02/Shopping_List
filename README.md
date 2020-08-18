@@ -17,7 +17,7 @@ View the app : https://shopping-list1234.herokuapp.com/
 
 
 Preview: 
-![Home Screen](/images/Home.jpg)
+![Home Screen](/images/Home.png)
 ![Logged In](/images/LoggedIn.png)
 
 Tutorial by Brad Traversy
